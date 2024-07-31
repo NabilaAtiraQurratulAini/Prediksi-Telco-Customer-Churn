@@ -434,7 +434,7 @@ with modeling:
 with evaluation:
     st.write("# EVALUATION")
 
-    st.write("### Visualisasi Pohon Keputusan")
+    # st.write("### Visualisasi Pohon Keputusan")
     # matplotlib.use("Agg")
     # fig, ax = plt.subplots(figsize=(20, 10))
     # plot_tree(dt_model, feature_names=X.columns, class_names=["Not Churn", "Churn"], filled=True, rounded=True, fontsize=10, ax=ax)
@@ -445,6 +445,7 @@ with evaluation:
     # plt.close()
     # st.image(buf, caption="Pohon Keputusan", use_column_width=True)
 
+    st.write("### Feature Importance Decision Tree")
     results = permutation_importance(dt_model, X_test, y_test, scoring="accuracy")
     importances = results.importances_mean
     feature_names = X.columns.tolist()
