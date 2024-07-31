@@ -435,9 +435,8 @@ with evaluation:
     st.write("# EVALUATION")
 
     st.write("### Visualisasi Pohon Keputusan")
-    matplotlib.use("Agg")
     fig, ax = plt.subplots(figsize=(20, 10))
-    plot_tree(dt_model, feature_names=X.columns, class_names=["Not Churn", "Churn"], filled=True, rounded=True, fontsize=10, ax=ax)
+    plot_tree(dt_model, feature_names=X.columns, class_names=["Not Churn", "Churn"], filled=True, rounded=True, ax=ax)
     plt.title("Pohon Keputusan")
     buf = io.BytesIO()
     plt.savefig(buf, format="png")
