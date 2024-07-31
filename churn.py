@@ -588,7 +588,7 @@ with deployment:
             st.write("Pelanggan kemungkinan besar akan tetap menggunakan layanan dengan probabilitas :", probability_dt)
         
         prediction_gnb, probability_gnb = predict(gnb_model, input_data)
-        st.write("### Prediksi Gaussian Naive Bayes")
+        st.write("### Prediksi Naive Bayes Gaussian")
         if prediction_gnb[0] == 1:
             st.write("Hasil Prediksi : Customer Churn")
             st.write("Pelanggan kemungkinan besar akan berhenti menggunakan layanan dengan probabilitas :", probability_gnb)
